@@ -1,0 +1,35 @@
+{
+    "name": "create-vivaphaser",
+    "version": "1.0.7",
+    "description": "",
+    "main": "main.js",
+    "bin": {
+        "create-vivaphaser": "main.js"
+    },
+    "scripts": {
+        "dev": "node esbuild/build.dev.mjs",
+        "build": "node esbuild/build.prod.mjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/adm-zip": "^0.5.5",
+        "@types/fs-extra": "^11.0.4",
+        "@types/minimist": "^1.2.5",
+        "@types/node": "^20.11.28",
+        "chokidar": "^3.6.0",
+        "esbuild": "^0.20.2",
+        "esbuild-plugin-clean": "^1.0.1"
+    },
+    "dependencies": {
+        "@types/prompts": "^2.4.9",
+        "adm-zip": "^0.5.12",
+        "chalk": "^5.3.0",
+        "fs-extra": "^11.2.0",
+        "minimist": "^1.2.8",
+        "node-fetch": "^3.3.2",
+        "ora": "^8.0.1",
+        "prompts": "^2.4.2"
+    }
+}

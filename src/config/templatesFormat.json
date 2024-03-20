@@ -1,0 +1,137 @@
+{
+    "delete": [
+        "screenshot.png"
+    ],
+    "clean": {
+        "delete": [
+            "src/game/main.{ext}",
+            "src/game/scenes/"
+        ],
+        "add": [
+            {
+                "localscaffolding": "scenes/Game.{ext}",
+                "output": "src/game/scenes/Game.{ext}",
+                "format": [
+                    {
+                        "search": "{template-addstars}",
+                        "replace": "",
+                        "frontendreplace": "\n        this.load.image('star', 'star.png');"
+                    },
+                    {
+                        "search": "{template-import-eventbus}",
+                        "replace": "",
+                        "frontendreplace": "import { EventBus } from '../EventBus';\n"
+                    },
+                    {
+                        "search": "{template-eventbus}",
+                        "replace": "",
+                        "frontendreplace": "\n        EventBus.emit('current-scene-ready', this);\n"
+                    }
+                ]
+            },
+            {
+                "localscaffolding": "main.{ext}",
+                "output": "src/game/main.{ext}",
+                "format": [
+                    {
+                        "search": "{template-scale}",
+                        "replace": "\n    scale: {\n        mode: Scale.FIT,\n        autoCenter: Scale.CENTER_BOTH\n    },",
+                        "frontendreplace": ""
+                    },
+                    {
+                        "search": "{template-import-scale}",
+                        "replace": "Scale,",
+                        "frontendreplace": ""
+                    },
+                    {
+                        "search": "{template-export}",
+                        "replace": "export default new Game(config);",
+                        "frontendreplace": "const StartGame = (parent) => {\n    return new Game({ ...config, parent });\n}\n\nexport default StartGame;\n"
+                    }
+                ]
+            }
+        ],
+        "react": {
+            "extensions": [
+                {
+                    "lang": "js",
+                    "ext": "jsx"
+                },
+                {
+                    "lang": "ts",
+                    "ext": "tsx"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "App.{ext}",
+                    "output": "src/App.{ext}"
+                }
+            ]
+        },
+        "vue": {
+            "extensions": [
+                {
+                    "lang": "js",
+                    "ext": "vue"
+                },
+                {
+                    "lang": "ts",
+                    "ext": "vue"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "App.{ext}",
+                    "output": "src/App.{ext}"
+                }
+            ]
+        },
+        "solid": {
+            "extensions": [
+                {
+                    "lang": "ts",
+                    "ext": "tsx"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "App.{ext}",
+                    "output": "src/App.{ext}"
+                }
+            ]
+        },
+        "svelte": {
+            "extensions": [
+                {
+                    "lang": "ts",
+                    "ext": "svelte"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "+page.{ext}",
+                    "output": "src/routes/+page.{ext}"
+                }
+            ]
+        },
+        "angular": {
+            "extensions": [
+                {
+                    "lang": "ts",
+                    "ext": "ts"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "app.component.{ext}",
+                    "output": "src/app/app.component.{ext}"
+                },
+                {
+                    "localscaffolding": "app.component.html",
+                    "output": "src/app/app.module.html"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "anims": [
+        {
+            "key": "hit",
+            "type": "frames",
+            "repeat": 0,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "enemy-blue",
+                    "frame": "enemy-blue-0"
+                },
+                {
+                    "key": "enemy-blue",
+                    "frame": "enemy-blue-1"
+                },
+                {
+                    "key": "enemy-blue",
+                    "frame": "enemy-blue-1"
+                },
+                {
+                    "key": "enemy-blue",
+                    "frame": "enemy-blue-0"
+                }
+            ]
+        }
+    ]
+}

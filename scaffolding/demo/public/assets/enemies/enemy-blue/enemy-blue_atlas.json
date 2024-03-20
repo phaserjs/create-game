@@ -1,0 +1,35 @@
+{
+    "frames": [
+        {
+            "filename": "enemy-blue-0",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 40,
+                "y": 4
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "enemy-blue-1",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 4,
+                "y": 4
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+        
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
