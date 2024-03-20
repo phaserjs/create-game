@@ -3,12 +3,12 @@
 ## How to use
 
 ```
-> npm create xxx@latest
+> npm create @phaserjs/game@latest
 ```
 
 Or
 ```
-> npm create xxx@latest folder-name
+> npm create @phaserjs/game@latest folder-name
 ```
 
 ## How to publish the package to npm
