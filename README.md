@@ -1,4 +1,4 @@
-# Template creator
+# Game creator
 
 ## How to use
 
