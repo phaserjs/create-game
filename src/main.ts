@@ -15,6 +15,7 @@ import { questionsText } from './config/questionsText';
     console.log(questionsText.welcomeMessage);
 
     const argv = Minimist(process.argv.slice(2));
+
     const folderNameAction = await getFolderNameAction(argv._[0]);
     setProjectFolderNameAction(folderNameAction)
 
@@ -25,6 +26,7 @@ import { questionsText } from './config/questionsText';
     if(templateType === 'demo') {
         installDemoTemplate();
     } else if (templateType === 'frontend' || templateType === 'bundle') {
+        
         const template = await getTemplate(templateType);
         setProjectTemplateName(template);
         

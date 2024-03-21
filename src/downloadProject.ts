@@ -9,6 +9,8 @@ import { questionsText } from './config/questionsText.js';
 
 export const downLoadProject = async () => {
 
+    
+
     // Ora loading
     const spinner = ora(questionsText.downloadTemplate.spinner.downloading).start();
 

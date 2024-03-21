@@ -8,7 +8,7 @@ export const getTemplateLangSufix = async () => {
 
     const templateList = templatesList[projectConfig.templateType];
 
-    if (!templateList.includes(`template-${projectConfig.templateName}-ts` as never) ) {
+    if (!templateList.includes(`${projectConfig.templateName}-ts` as never) ) {
         return {
             lang: templatesList.tstemplates.includes((projectConfig.templateName)) ? 'ts' : 'js',
             sufix: ''
