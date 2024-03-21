@@ -129,7 +129,11 @@
                 },
                 {
                     "localscaffolding": "app.component.html",
-                    "output": "src/app/app.module.html"
+                    "output": "src/app/app.component.html"
+                }, 
+                {
+                    "localscaffolding": "game/main.{ext}",
+                    "output": "src/game/main.{ext}"
                 }
             ]
         }

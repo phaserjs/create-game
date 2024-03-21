@@ -10,14 +10,14 @@ export const formatCleanTemplate = () => {
         if (projectConfig.skeleton === 'clean') {
             const { clean } = TemplatesFormat;
 
-            // use clean.delete array to remove files and folders
+            // DELETE FILES FROM GENERIC TEMPLATES (if some template don't need it, this is ignored automatically)
             clean.delete.forEach((item) => {
                 const itemFormatted = item.replace('{ext}', projectConfig.lang).replace('game/', (projectConfig.templateType === 'frontend') ? 'game/' : '');
                 const path = `./${projectConfig.folderName}/${itemFormatted}`;
                 fse.removeSync(path);
             });
 
-            // use clean.add array to add files, localscaffolding get files from ./scaffolding
+            // ADD FILES FROM GENERIC TEMPLATES
             clean.add.forEach((item) => {
                 const localScaffolding = item.localscaffolding.replace('{ext}', projectConfig.lang);
                 const outputFileFormat = item.output.replace('{ext}', projectConfig.lang).replace('game/', (projectConfig.templateType === 'frontend') ? 'game/' : '');
@@ -39,7 +39,7 @@ export const formatCleanTemplate = () => {
                 fse.outputFileSync(outputPath, scaffolding);
             });
 
-            // If is frontend search the templateName to get the correct data for replace
+            // REPLACE FILES FOR FRONTEND SINGULAR TEMPLATES: angular, react, vue, etc...
             if (projectConfig.templateType === 'frontend') {
                 // @ts-ignore
                 const frontEnd = clean[projectConfig.templateName];
@@ -50,6 +50,7 @@ export const formatCleanTemplate = () => {
                     })[0].ext;
 
                     frontEnd.replace.forEach((frontendReplace: { localscaffolding: string; output: string }) => {
+                        console.log("Replace: ", frontendReplace)
                         const scaffoldingFile = frontendReplace.localscaffolding.replace('{ext}', frontEndExtension);
                         const fileOutput = frontendReplace.output.replace('{ext}', frontEndExtension);
                         const scaffoldingPath = `${getBaseURL()}/scaffolding/clean/${projectConfig.templateName}/${projectConfig.lang}/${scaffoldingFile}`;

@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PhaserGame } from '../game/phaser-game.component';
-import { MainMenu } from '../game/scenes/MainMenu';
 import { CommonModule } from '@angular/common';
 import { EventBus } from '../game/EventBus';
+import Phaser from 'phaser';
 
 @Component({
     selector: 'app-root',
@@ -11,13 +11,22 @@ import { EventBus } from '../game/EventBus';
     imports: [CommonModule, RouterOutlet, PhaserGame],
     templateUrl: './app.component.html'
 })
-export class AppComponent
+export class AppComponent implements AfterViewInit
 {
 
     public spritePosition = { x: 0, y: 0 };
 
     // This is a reference from the PhaserGame component
     @ViewChild(PhaserGame) phaserRef!: PhaserGame;
+
+    ngAfterViewInit()
+    {
+
+        EventBus.on('current-scene-ready', (scene: Phaser.Scene) => {
+            console.log('Scene ready:', scene.scene.key);
+        });
+
+    }
 
     public addSprite()
     {
@@ -32,7 +41,7 @@ export class AppComponent
             const y = Phaser.Math.Between(64, scene.scale.height - 64);
 
             //  `add.sprite` is a Phaser GameObjectFactory method and it returns a Sprite Game Object instance
-            const star = scene.add.sprite(x, y, 'star');
+            scene.add.sprite(x, y, 'star');
 
         }
 

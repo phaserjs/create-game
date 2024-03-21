@@ -1,10 +1,10 @@
 {
-    "name": "create-vivaphaser",
-    "version": "1.0.7",
+    "name": "create-game",
+    "version": "0.0.1",
     "description": "",
     "main": "main.js",
     "bin": {
-        "create-vivaphaser": "main.js"
+        "create-game": "main.js"
     },
     "scripts": {
         "dev": "node esbuild/build.dev.mjs",
