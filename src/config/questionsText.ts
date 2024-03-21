@@ -3,7 +3,7 @@ import chalk from 'chalk';
 export const questionsText = {
     cancelByUser: 'User closed the process',
     folderNameAction: {
-        message: chalk.yellow('What is your project name?'),
+        message: chalk.yellow('Enter Project Name:'),
         action: chalk.red('The folder already exists, what do you want to do?'),
         choices: {
             create: 'Choose another name',
@@ -12,21 +12,21 @@ export const questionsText = {
         invalidName: 'Invalid folder name. Please choose another name.'
     },
     typeTemplate: {
-        message: chalk.yellow('Select type template:'),
+        message: chalk.yellow('Select Phaser Template:'),
         choices: {
             demo: 'Demo Game',
-            frontend: 'Client Framework (React, Vue, etc...)',
-            bundle: 'Bundler'
+            frontend: 'Client Framework (React, Vue, Angular or SolidJS)',
+            bundle: 'Web Bundler (Vite, Webpack, ESBuild, Parcel, Rollup or ImportMap)'
         }
     },
     template: {
         message: chalk.yellow('Select template:')
     },
     cleanOrSkeleton: {
-        message: chalk.yellow('Select clean or skeleton template:')
+        message: chalk.yellow('Select Minimal or Complete Template:')
     },
     templateLangSufix: {
-        message: chalk.yellow('Select the language:')
+        message: chalk.yellow('Select Development Language:')
     },
     downloadTemplate: {
         spinner: {
@@ -39,12 +39,12 @@ export const questionsText = {
         }
     },
     welcomeMessage: `\no--------------------------------------------------o
-| 🚀  Welcome to the Phaser template installer 🚀  |
+| 🚀  Welcome to the Phaser Template Installer 🚀  |
 |           Let´s start the installation           |
 o--------------------------------------------------o\n`,
     endMessage: `\no---------------------------------------------------------o
 |               Project created successfully              |
-|               Thank you for using phaserjs              |
+|                Thank you for using Phaser               |
 |    🚀  Tell us about your game! - games@phaser.io 🚀    |
 o---------------------------------------------------------o
 
