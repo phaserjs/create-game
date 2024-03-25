@@ -23,7 +23,11 @@ export const questionsText = {
         message: chalk.yellow('Select template:')
     },
     cleanOrSkeleton: {
-        message: chalk.yellow('Select Minimal or Complete Template:')
+        message: chalk.yellow('Select Minimal or Complete Template:'),
+        choices: {
+            clean: 'Minimal',
+            skeleton: 'Complete'
+        }
     },
     templateLangSufix: {
         message: chalk.yellow('Select Development Language:')
@@ -40,7 +44,7 @@ export const questionsText = {
     },
     welcomeMessage: `\no--------------------------------------------------o
 | 🚀  Welcome to the Phaser Template Installer 🚀  |
-|            Let´s start the installation           |
+|            Let´s start the installation          |
 o--------------------------------------------------o\n`,
     endMessage: `\no---------------------------------------------------------o
 |               Project created successfully              |

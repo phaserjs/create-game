@@ -2,7 +2,7 @@ import ora from 'ora';
 import fse from 'fs-extra';
 import path from 'path';
 import { projectConfig } from './projectConfig';
-import { getBaseURL } from './utils/getBaseURL';
+import { getBaseURL } from './utils';
 import { questionsText } from './config/questionsText';
 
 export const installDemoTemplate = () => {

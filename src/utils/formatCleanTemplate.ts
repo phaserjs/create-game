@@ -3,6 +3,11 @@ import { getBaseURL } from './getBaseURL';
 import { projectConfig } from '../projectConfig';
 import TemplatesFormat from '../config/templatesFormat.json';
 
+/**
+ * Formats the clean template based on the project configuration.
+ * Deletes unnecessary files, adds required files, and replaces files for frontend singular templates.
+ * @returns {boolean} Returns true if the clean template is formatted successfully.
+ */
 export const formatCleanTemplate = () => {
     if (projectConfig.skeleton === 'clean') {
         // const templateConfig = fse.readJsonSync(`${getBaseURL()}/config/templatesFormat.json`);

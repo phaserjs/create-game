@@ -1,6 +1,6 @@
 import prompts from 'prompts';
 import { templatesList } from '../config/templatesList';
-import { isClosedByUser } from '../utils/isClosedByUser';
+import { isClosedByUser } from '../utils';
 import { questionsText } from '../config/questionsText';
 
 /**
@@ -21,8 +21,8 @@ export const getTemplateCleanSkeleton = async (template: string) => {
                 name: 'type',
                 message: questionsText.cleanOrSkeleton.message,
                 choices: [
-                    { title: 'Skeleton', value: 'skeleton' },
-                    { title: 'Clean', value: 'clean' }
+                    { title: questionsText.cleanOrSkeleton.choices.skeleton, value: 'skeleton' },
+                    { title: questionsText.cleanOrSkeleton.choices.clean, value: 'clean' }
                 ],
             }
         ]);

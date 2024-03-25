@@ -5,7 +5,7 @@ export const projectConfig: TProjectConfig = {
     "folderName": "my-phaser-game",
     "folderAction": "create", // create | delete
     "templateName": "phaser", // phaser | react | vue | svelte etc...
-    "templateType": "frontend", // frontend | bundle
+    "templateType": "frontend", // frontend | bundle | demo | undefined
     "sufix": "", // js | ts | '' - the sufix lang is used to get the template url like react-ts
     "lang": 'js', // js | ts -> This is used to get the default template lang, a template could don't have sufix but can have ts like default lang (svelte)
     "skeleton": "clean" // clean | skeleton

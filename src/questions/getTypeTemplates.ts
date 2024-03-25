@@ -1,7 +1,7 @@
 import prompts from "prompts";
 import { questionsText } from "../config/questionsText";
 import { TTemplateType } from "../types";
-import { isClosedByUser } from "../utils/isClosedByUser";
+import { isClosedByUser } from "../utils";
 
 /**
  * Retrieves the type template based on user selection.

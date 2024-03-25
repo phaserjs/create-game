@@ -1,7 +1,7 @@
 import prompts from 'prompts';
 import { templatesList } from '../config/templatesList';
 import { projectConfig } from '../projectConfig';
-import { isClosedByUser } from '../utils/isClosedByUser';
+import { isClosedByUser } from '../utils';
 import { questionsText } from '../config/questionsText';
 
 export const getTemplateLangSufix = async () => {

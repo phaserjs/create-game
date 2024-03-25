@@ -1,9 +1,8 @@
 import prompts from "prompts";
-import { existFolder, isValidFolderName } from "../utils";
+import { existFolder, isValidFolderName, isClosedByUser } from "../utils";
 import { TFolderAction, TProjectNameAction } from "../types/questions";
 import { projectConfig } from "../projectConfig";
 import { questionsText } from "../config/questionsText";
-import { isClosedByUser } from "../utils/isClosedByUser";
 
 /**
  * Asks the user what to do if the folder already exists.

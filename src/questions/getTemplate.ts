@@ -1,8 +1,7 @@
 import prompts from 'prompts';
 import { TTemplateType } from '../types';
 import { templatesList } from '../config/templatesList';
-import { cleanTemplatesList } from '../utils/cleanTemplatesList';
-import { isClosedByUser } from '../utils/isClosedByUser';
+import { cleanTemplatesList, isClosedByUser } from '../utils';
 import { questionsText } from '../config/questionsText';
 
 /**
