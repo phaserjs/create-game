@@ -36,7 +36,6 @@ import { formatCleanTemplate } from './utils';
         console.log("--- trying to install demo template ---")
     }
     if (templateType === 'frontend' || templateType === 'bundle') {
-        console.log("--- trying to install frontend or bundle template ---")
 
         const template = await getTemplate(templateType);
         setProjectTemplateName(template);
