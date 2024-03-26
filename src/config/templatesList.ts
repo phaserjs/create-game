@@ -8,7 +8,8 @@ export const templatesList = {
         "solid",
         "svelte",
         "vue",
-        "vue-ts"
+        "vue-ts",
+        "nextjs"
     ],
     "bundle": [
         "webpack",
@@ -25,12 +26,14 @@ export const templatesList = {
     "demo": [/* if we want to add more demos */],
     // Dont ask for clean/skeleton. There are templates that are only skeleton mode.
     "noskeletonquestion": [
-        "importmap"
+        "importmap",
+        "nextjs"
     ],
     // TS by default
     "tstemplates": [
         "angular",
         "svelte",
-        "solid"
+        "solid",
+        "nextjs"
     ]
 }
