@@ -22,7 +22,11 @@ export const templatesList = {
         "rollup",
         "rollup-ts"
     ],
-    "demo": [/* if we want to add more demos */],
+    "demo": [
+        /* if we want to add more demos */
+        "Phaser's Revenge",
+        
+    ],
     // Dont ask for clean/skeleton. There are templates that are only skeleton mode.
     "noskeletonquestion": [
         "importmap",

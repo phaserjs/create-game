@@ -9,6 +9,7 @@ import { installDemoTemplate } from './installDemoTemplate';
 import { downLoadProject } from './downloadProject';
 import { questionsText } from './config/questionsText';
 import { formatCleanTemplate } from './utils';
+import { getDemo } from './questions/getDemo';
 
 
 
@@ -32,8 +33,11 @@ import { formatCleanTemplate } from './utils';
 
 
     if (templateType === 'demo') {
+        const demo = await getDemo();
+        projectConfig.templateName = demo;
+
         installDemoTemplate();
-        console.log("--- trying to install demo template ---")
+        console.log("--- trying to install demo template ---", demo)
     }
     if (templateType === 'frontend' || templateType === 'bundle') {
 

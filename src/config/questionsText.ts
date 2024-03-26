@@ -2,6 +2,9 @@ import chalk from 'chalk';
 
 export const questionsText = {
     cancelByUser: 'Canceled.',
+    demo: {
+        message: chalk.yellow('Select a demo:')
+    },
     folderNameAction: {
         message: chalk.yellow('Enter Project Name:'),
         action: chalk.red('The folder already exists, what do you want to do?'),

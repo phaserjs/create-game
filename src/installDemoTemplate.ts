@@ -24,7 +24,7 @@ export const installDemoTemplate = () => {
         }
     }
 
-    const demoPath = `${getBaseURL()}/scaffolding/demo/`;
+    const demoPath = `${getBaseURL()}/scaffolding/demo/${projectConfig.templateName}`;
     const projectPath = `./${projectConfig.folderName}`;
     fse.copySync(demoPath, projectPath);
     spinner.stop();
