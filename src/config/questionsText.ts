@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 
 export const questionsText = {
-    cancelByUser: 'User closed the process',
+    cancelByUser: 'Canceled.',
     folderNameAction: {
         message: chalk.yellow('Enter Project Name:'),
         action: chalk.red('The folder already exists, what do you want to do?'),
@@ -43,13 +43,13 @@ export const questionsText = {
         }
     },
     welcomeMessage: `\no--------------------------------------------------o
-| 🚀  Welcome to the Phaser Template Installer 🚀  |
-|            Let´s start the installation          |
+|     Welcome to the Phaser Template Installer     |
+|             Let´s start the installation         |
 o--------------------------------------------------o\n`,
     endMessage: `\no---------------------------------------------------------o
 |               Project created successfully              |
 |                Thank you for using Phaser               |
-|    🚀  Tell us about your game! - games@phaser.io 🚀   |
+|       Tell us about your game! - games@phaser.io        |
 o---------------------------------------------------------o
 
 ${chalk.yellow('Next steps:')}

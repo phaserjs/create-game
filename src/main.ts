@@ -8,7 +8,7 @@ import { getTemplateLangSufix } from './questions/getTemplateLangSufix';
 import { installDemoTemplate } from './installDemoTemplate';
 import { downLoadProject } from './downloadProject';
 import { questionsText } from './config/questionsText';
-import { formatCleanTemplate, existTemplate } from './utils';
+import { formatCleanTemplate } from './utils';
 
 
 
@@ -33,8 +33,10 @@ import { formatCleanTemplate, existTemplate } from './utils';
 
     if (templateType === 'demo') {
         installDemoTemplate();
+        console.log("--- trying to install demo template ---")
     }
     if (templateType === 'frontend' || templateType === 'bundle') {
+        console.log("--- trying to install frontend or bundle template ---")
 
         const template = await getTemplate(templateType);
         setProjectTemplateName(template);
@@ -45,13 +47,14 @@ import { formatCleanTemplate, existTemplate } from './utils';
 
         const templateLangSufix = await getTemplateLangSufix();
         setProjectTemplateLangSufix(templateLangSufix);
+
+        await downLoadProject();
+    
+        if (projectConfig.skeleton === 'clean') {
+            await formatCleanTemplate();
+        }
     }
 
-    await downLoadProject();
-
-    if (projectConfig.skeleton === 'clean') {
-        await formatCleanTemplate();
-    }
 
     console.log(questionsText.endMessage.replace('{folderName}', projectConfig.folderName));
 

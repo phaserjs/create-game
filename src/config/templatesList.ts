@@ -1,5 +1,4 @@
 export const templatesList = {
-    "url": "https://github.com/phaserjs/template-{template-name}/archive/refs/heads/main.zip",
     "frontend": [
         "importmap",
         "angular",

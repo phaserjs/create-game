@@ -1,10 +1,9 @@
 import path from 'path';
-import { templatesList } from './config/templatesList.js';
 import AdmZip from 'adm-zip';
 import fetch from 'node-fetch';
 import ora from 'ora';
 import fse from 'fs-extra';
-import { projectConfig } from './projectConfig.js';
+import { githubURL, projectConfig } from './projectConfig.js';
 import { questionsText } from './config/questionsText.js';
 
 export const downLoadProject = async () => {
@@ -12,7 +11,7 @@ export const downLoadProject = async () => {
     // Ora loading
     const spinner = ora(questionsText.downloadTemplate.spinner.downloading).start();
 
-    const zipUrl = templatesList.url.replace('{template-name}', projectConfig.templateName + ((projectConfig.sufix === 'ts') ? '-ts' : ''));
+    const zipUrl = githubURL.replace('{template-name}', projectConfig.templateName + ((projectConfig.sufix === 'ts') ? '-ts' : ''));
 
     // Download from github and wait until it's done
     const res = await fetch(zipUrl);

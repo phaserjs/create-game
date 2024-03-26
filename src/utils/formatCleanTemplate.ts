@@ -55,7 +55,6 @@ export const formatCleanTemplate = () => {
                     })[0].ext;
 
                     frontEnd.replace.forEach((frontendReplace: { localscaffolding: string; output: string }) => {
-                        console.log("Replace: ", frontendReplace)
                         const scaffoldingFile = frontendReplace.localscaffolding.replace('{ext}', frontEndExtension);
                         const fileOutput = frontendReplace.output.replace('{ext}', frontEndExtension);
                         const scaffoldingPath = `${getBaseURL()}/scaffolding/clean/${projectConfig.templateName}/${projectConfig.lang}/${scaffoldingFile}`;

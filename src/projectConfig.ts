@@ -1,14 +1,20 @@
 import { TProjectConfig } from "./types";
 import { TProjectNameAction } from "./types/questions";
 
+
+export const githubURL = "https://github.com/phaserjs/template-{template-name}/archive/refs/heads/main.zip";
+
+/**
+ * Configuration object for the project. It will be used to create the project folder and download the template.
+ */
 export const projectConfig: TProjectConfig = {
     "folderName": "my-phaser-game",
-    "folderAction": "create", // create | delete
-    "templateName": "phaser", // phaser | react | vue | svelte etc...
-    "templateType": "frontend", // frontend | bundle | demo | undefined
-    "sufix": "", // js | ts | '' - the sufix lang is used to get the template url like react-ts
-    "lang": 'js', // js | ts -> This is used to get the default template lang, a template could don't have sufix but can have ts like default lang (svelte)
-    "skeleton": "clean" // clean | skeleton
+    "folderAction": "create",
+    "templateName": "phaser",
+    "templateType": "frontend",
+    "sufix": "",
+    "lang": 'js',
+    "skeleton": "clean"
 };
 
 export const setProjectFolderNameAction = (settings: TProjectNameAction) => {
