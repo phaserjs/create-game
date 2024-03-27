@@ -24,7 +24,7 @@ We have the following templates available:
 - vue
 - vue-ts
 - webpack
-- webpack-t
+- webpack-ts
 
 ## How to use
 
