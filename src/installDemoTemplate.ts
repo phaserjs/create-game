@@ -4,6 +4,7 @@ import path from 'path';
 import { projectConfig } from './projectConfig';
 import { getBaseURL } from './utils';
 import { questionsText } from './config/questionsText';
+import { templatesList } from './config/templatesList';
 
 export const installDemoTemplate = () => {
 
@@ -24,7 +25,9 @@ export const installDemoTemplate = () => {
         }
     }
 
-    const demoPath = `${getBaseURL()}/scaffolding/demo/${projectConfig.templateName}`;
+    const url = templatesList.demo.find(d => d.templateName === projectConfig.templateName)?.url;
+
+    const demoPath = `${getBaseURL()}/${url}`;
     const projectPath = `./${projectConfig.folderName}`;
     fse.copySync(demoPath, projectPath);
     spinner.stop();
