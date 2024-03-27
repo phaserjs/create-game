@@ -13,7 +13,7 @@ You can pick from any of the following templates:
 | Angular | Parcel |
 | Next.js | Webpack |
 | SolidJS | ESBuild |
-| Svelete | Import Map |
+| Svelte | Import Map |
 
 Most of these come in both JavaScript and TypeScript versions, and the tool will present this option to you when available.
 
