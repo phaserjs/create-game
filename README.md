@@ -49,5 +49,6 @@ Once installed you can modify the template settings and check its own `README.md
 
 ---
 
-Created by [Phaser Studio](https://phaser.io) Inc.
 ![Phaser Studio](phaser-studio-128.png)
+
+Created by [Phaser Studio](https://phaser.io) Inc.
