@@ -18,7 +18,7 @@ export const questionsText = {
         message: chalk.yellow('Select Phaser Template:'),
         choices: {
             demo: 'Demo Game',
-            frontend: 'Client Framework (React, Vue, Angular or SolidJS)',
+            frontend: 'Client Framework (React, Vue, Angular, Next.js or SolidJS)',
             bundle: 'Web Bundler (Vite, Webpack, ESBuild, Parcel, Rollup or ImportMap)'
         }
     },
@@ -47,7 +47,7 @@ export const questionsText = {
     },
     welcomeMessage: `\no--------------------------------------------------o
 |     Welcome to the Phaser Template Installer     |
-|             Let´s start the installation         |
+|           Let´s start the installation           |
 o--------------------------------------------------o\n`,
     endMessage: `\no---------------------------------------------------------o
 |               Project created successfully              |
@@ -58,7 +58,7 @@ o---------------------------------------------------------o
 ${chalk.yellow('Next steps:')}
 1. cd {folderName}
 2. npm install
-3. npm dev
+3. npm run dev
 
 ${chalk.cyan('Happy coding!')}`,
 }

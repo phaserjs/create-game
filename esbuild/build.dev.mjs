@@ -12,13 +12,13 @@ const builder = async () => {
         await build({
             color: true,
             entryPoints: ['./src/main.ts'],
-            outfile: './dist/phasercreator.js',
+            outfile: './phaser-creator/index.js',
             bundle: true,
             minify: false,
             sourcemap: true,
             plugins: [
                 clean({
-                    patterns: ['./dist/*']
+                    patterns: ['./phaser-creator/*']
                 })
             ],
             tsconfig: './tsconfig.json',

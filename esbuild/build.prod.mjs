@@ -4,13 +4,13 @@ import clean from 'esbuild-plugin-clean';
 const builder = async () => {
     await build({
         entryPoints: ['./src/main.ts'],
-        outfile: './dist/phasercreator.js',
+        outfile: './phaser-creator/index.js',
         bundle: true,
         minify: true,
         sourcemap: false,
         plugins: [
             clean({
-                patterns: ['./dist/*']
+                patterns: ['./phaser-creator/*']
             })
         ],
         tsconfig: './tsconfig.json',

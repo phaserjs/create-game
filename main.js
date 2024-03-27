@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-require('./dist/phasercreator.js');
+require('./phaser-creator/index.js');
 

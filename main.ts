@@ -1,2 +1,2 @@
-//# sourceMappingURL=./dist/bundle.min.js.map
-require('./dist/phasercreator.js');
+//# sourceMappingURL=./phaser-creator/index.js.map
+require('./phaser-creator/index.js');

@@ -11,8 +11,6 @@ import { questionsText } from './config/questionsText';
 import { formatCleanTemplate } from './utils';
 import { getDemo } from './questions/getDemo';
 
-
-
 (async () => {
 
     console.log(questionsText.welcomeMessage);
