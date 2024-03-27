@@ -1,43 +1,53 @@
-# Phaser Template Installer 
+# Create Phaser Game
 
-![](https://cdn.discordapp.com/attachments/1193902214813601833/1220741377864892446/image.png?ex=66100b00&is=65fd9600&hm=e692e9e1c270b066937599889bf7c32b71321adc978260f2ceca5c25fca6a1ef&)
+![image](phaser-create-game.png)
 
-This is a tool that helps you install the available Phaser templates.
+One of the easiest ways to get started quickly with [Phaser](https://phaser.io) is by using our `create-phaser-game` app. This is a CLI tool that presents a selection of official project templates and demo games, allowing you to get started quickly with everything set up for you.
 
-We have the following templates available:
+You can pick from any of the following templates:
 
-- angular
-- esbuild
-- esbuild-ts
-- importmap
-- nextjs
-- parcel
-- parcel-ts
-- react
-- react-ts
-- rollup
-- rollup-ts
-- solid
-- svelte
-- vite
-- vite-ts
-- vue
-- vue-ts
-- webpack
-- webpack-ts
+| Front-ends | Bundlers |
+| --------- | ------- |
+| Vue.js | Vite |
+| React | Rollup |
+| Angular | Parcel |
+| Next.js | Webpack |
+| SolidJS | ESBuild |
+| Svelete | Import Map |
+
+Most of these come in both JavaScript and TypeScript versions, and the tool will present this option to you when available.
 
 ## How to use
 
-To create a new game template, you can use the following command:
+To create a new local game template interactively, use one of the following terminal commands:
+
 ```
-> npm create @phaserjs/game@latest
+> npx create @phaserjs/game@latest
 ```
 
-If you want to create a new folder with the game template, you can use the following command:
 ```
-> npm create @phaserjs/game@latest folder-name
+> yarn create @phaserjs/game@latest
 ```
 
-Next you will be asked a series of questions to configure your game template.
+```
+> pnpm create @phaserjs/game@latest
+```
 
-Once you install the template, you will be able to read the template's settings in its own readme.md file.
+```
+> bunx create @phaserjs/game@latest
+```
+
+If you would like to pass the project/folder name and skip this step of the tool, you can do so on as a parameter to the create command:
+
+```
+> npx create @phaserjs/game@latest folder-name
+```
+
+The tool will then ask you a series of questions to allow you to configure your game template.
+
+Once installed you can modify the template settings and check its own `README.md` file for further instructions.
+
+---
+
+Created by [Phaser Studio](https://phaser.io) Inc.
+![Phaser Studio](phaser-studio-128.png)
