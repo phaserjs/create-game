@@ -37,7 +37,6 @@ import { getDemo } from './questions/getDemo';
         projectConfig.templateName = demo;
 
         installDemoTemplate();
-        console.log("--- trying to install demo template ---", demo)
     }
     if (templateType === 'frontend' || templateType === 'bundle') {
 
