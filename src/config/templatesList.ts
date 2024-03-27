@@ -46,8 +46,7 @@ export const templatesList = {
     ],
     // Dont ask for clean/skeleton. There are templates that are only skeleton mode.
     "noskeletonquestion": [
-        "importmap",
-        "nextjs"
+        "importmap"
     ],
     // TS by default
     "tstemplates": [

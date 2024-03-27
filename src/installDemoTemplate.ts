@@ -21,6 +21,7 @@ export const installDemoTemplate = () => {
         } catch (err) {
             console.error(err);
             spinner.fail(questionsText.downloadTemplate.spinner.deletingFail);
+            process.exit(1);
             return false;
         }
     }

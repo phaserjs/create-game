@@ -5,6 +5,7 @@ import { isClosedByUser } from "../utils";
 
 export const getDemo = async () => {
     const demos = templatesList.demo;
+
     const demo = await prompts({
         type: 'select',
         name: 'value',
@@ -12,6 +13,7 @@ export const getDemo = async () => {
         choices: demos.map(d => ({ title: `${d.name} - ${d.description}`, value: d.templateName }))
     });
 
-    isClosedByUser(demo);
+    isClosedByUser(demo.value);
+
     return demo.value;
 }

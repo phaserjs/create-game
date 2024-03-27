@@ -49,7 +49,7 @@ import { getDemo } from './questions/getDemo';
         setProjectTemplateLangSufix(templateLangSufix);
 
         await downLoadProject();
-    
+
         if (projectConfig.skeleton === 'clean') {
             await formatCleanTemplate();
         }

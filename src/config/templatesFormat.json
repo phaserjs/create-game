@@ -136,6 +136,24 @@
                     "output": "src/game/main.{ext}"
                 }
             ]
+        },
+        "nextjs": {
+            "extensions": [
+                {
+                    "lang": "ts",
+                    "ext": "tsx"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "App.{ext}",
+                    "output": "src/app/App.{ext}"
+                },
+                {
+                    "localscaffolding": "game/main.ts",
+                    "output": "src/game/main.ts"
+                }
+            ]
         }
     }
 }
