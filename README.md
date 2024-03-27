@@ -6,7 +6,7 @@ One of the easiest ways to get started quickly with [Phaser](https://phaser.io) 
 
 You can pick from any of the following templates:
 
-| Front-ends | Bundlers |
+| Frameworks | Bundlers |
 | --------- | ------- |
 | Vue.js | Vite |
 | React | Rollup |
