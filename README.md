@@ -22,28 +22,28 @@ Most of these come in both JavaScript and TypeScript versions, and the tool will
 To create a new local game template interactively, use one of the following terminal commands:
 
 ```
-> npm create @phaserjs/game@latest
+npm create @phaserjs/game@latest
 ```
 ```
-> npx @phaserjs/create-game@latest
-```
-
-```
-> yarn create @phaserjs/game
+npx @phaserjs/create-game@latest
 ```
 
 ```
-> pnpm create @phaserjs/game@latest
+yarn create @phaserjs/game
 ```
 
 ```
-> bunx create @phaserjs/game@latest
+pnpm create @phaserjs/game@latest
+```
+
+```
+bunx create @phaserjs/game@latest
 ```
 
 If you would like to pass the project/folder name and skip this step of the tool, you can do so on as a parameter to the create command:
 
 ```
-> npm create @phaserjs/game@latest folder-name
+npm create @phaserjs/game@latest folder-name
 ```
 
 The tool will then ask you a series of questions to allow you to configure your game template.
