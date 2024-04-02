@@ -61,4 +61,5 @@ ${chalk.yellow('Next steps:')}
 3. npm run dev
 
 ${chalk.cyan('Happy coding!')}`,
+    recordData: `We anonymously record which template was selected to help guide development.\nIf you don't agree, press N. Otherwise, press Y.`
 }
