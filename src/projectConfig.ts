@@ -2,7 +2,8 @@ import { TProjectConfig } from "./types";
 import { TProjectNameAction } from "./types/questions";
 
 
-export const githubURL = "https://github.com/phaserjs/template-{template-name}/archive/refs/heads/main.zip";
+// export const githubURL = "https://github.com/phaserjs/template-{template-name}/archive/refs/heads/main.zip";
+export const githubURL = "https://phaser.io/r/create-game-template/template-{template-name}";
 
 /**
  * Configuration object for the project. It will be used to create the project folder and download the template.

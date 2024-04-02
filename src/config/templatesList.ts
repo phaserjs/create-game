@@ -1,6 +1,5 @@
 export const templatesList = {
     "frontend": [
-        "importmap",
         "angular",
         "react",
         "react-ts",
@@ -11,6 +10,7 @@ export const templatesList = {
         "nextjs"
     ],
     "bundle": [
+        "importmap",
         "webpack",
         "webpack-ts",
         "vite",

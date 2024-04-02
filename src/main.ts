@@ -1,6 +1,6 @@
 import Minimist from 'minimist';
 import { projectConfig, setProjectFolderNameAction, setProjectTemplateLangSufix, setProjectTemplateName, setProjectTemplateSkeleton, setProjectTemplateType } from './projectConfig';
-import { getFolderNameAction, getTypeTemplate } from './questions';
+import { getFolderNameAction, getTypeTemplate, getUserDesition } from './questions';
 import { getTemplate } from './questions/getTemplate';
 
 import { getTemplateCleanSkeleton } from './questions/getTemplateCleanSkeleton';
@@ -12,7 +12,6 @@ import { formatCleanTemplate } from './utils';
 import { getDemo } from './questions/getDemo';
 
 (async () => {
-
     console.log(questionsText.welcomeMessage);
 
     const argv = Minimist(process.argv.slice(2));
@@ -48,12 +47,17 @@ import { getDemo } from './questions/getDemo';
         const templateLangSufix = await getTemplateLangSufix();
         setProjectTemplateLangSufix(templateLangSufix);
 
+        // Ask for record data templates
+        await getUserDesition();
+
         await downLoadProject();
 
         if (projectConfig.skeleton === 'clean') {
             await formatCleanTemplate();
         }
     }
+
+    
 
 
     console.log(questionsText.endMessage.replace('{folderName}', projectConfig.folderName));
