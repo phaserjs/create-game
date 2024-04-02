@@ -3,7 +3,7 @@ import chalk from 'chalk';
 export const questionsText = {
     cancelByUser: 'Canceled.',
     demo: {
-        message: chalk.yellow('Select a demo:')
+        message: chalk.yellow('Select Demo Game:')
     },
     folderNameAction: {
         message: chalk.yellow('Enter Project Name:'),
@@ -15,21 +15,21 @@ export const questionsText = {
         invalidName: 'Invalid folder name. Please choose another name.'
     },
     typeTemplate: {
-        message: chalk.yellow('Select Phaser Template:'),
+        message: chalk.yellow('Select Option:'),
         choices: {
-            demo: 'Demo Game',
-            frontend: 'Client Framework (React, Vue, Angular, Next.js or SolidJS)',
-            bundle: 'Web Bundler (Vite, Webpack, ESBuild, Parcel, Rollup or ImportMap)'
+            frontend: 'Client Framework (React, Vue, Angular, Next.js, Svelte or SolidJS)',
+            bundle: 'Web Bundler (Vite, Webpack, ESBuild, Parcel, Rollup or ImportMap)',
+            demo: 'Demo Game (Matching Pairs, Clicker, Shmup)'
         }
     },
     template: {
-        message: chalk.yellow('Select template:')
+        message: chalk.yellow('Select Template:')
     },
     cleanOrSkeleton: {
-        message: chalk.yellow('Select Minimal or Complete Template:'),
+        message: chalk.yellow('Minimal or Complete Project:'),
         choices: {
-            clean: 'Minimal',
-            skeleton: 'Complete'
+            clean: 'Minimal (Single Phaser Scene)',
+            skeleton: 'Complete (Common Phaser Scene selection)'
         }
     },
     templateLangSufix: {
@@ -37,12 +37,12 @@ export const questionsText = {
     },
     downloadTemplate: {
         spinner: {
-            downloading: 'Downloading template',
+            downloading: 'Downloading Template',
             downloadingFail: 'Error downloading {templateName} template',
-            deleting: 'Deleting project folder',
+            deleting: 'Deleting Project folder',
             deletingSuccess: chalk.blue('Project folder deleted'),
             deletingFail: chalk.red('Error deleting project folder'),
-            succeed: chalk.yellow('Project downloaded')
+            succeed: chalk.yellow('Project Downloaded')
         }
     },
     welcomeMessage: `\no--------------------------------------------------o
