@@ -1,4 +1,4 @@
-import { TFolderAction } from "./questions";
+import { TFolderAction } from './questions';
 
 export type TTemplateType = 'frontend' | 'bundle' | 'demo' | undefined;
 export type TSuffixLang = 'js' | 'ts' | '';

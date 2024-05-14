@@ -147,7 +147,7 @@
             "replace": [
                 {
                     "localscaffolding": "App.{ext}",
-                    "output": "src/app/App.{ext}"
+                    "output": "src/App.{ext}"
                 },
                 {
                     "localscaffolding": "game/main.ts",
