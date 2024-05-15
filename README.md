@@ -48,7 +48,7 @@ pnpm create @phaserjs/game@latest
 ```
 
 ```
-bunx create @phaserjs/game@latest
+bun create @phaserjs/game@latest
 ```
 
 ## First Time Users
