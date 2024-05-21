@@ -10,11 +10,12 @@ export const templatesList = {
         "nextjs"
     ],
     "bundle": [
-        "importmap",
-        "webpack",
-        "webpack-ts",
         "vite",
         "vite-ts",
+        "bun",
+        "webpack",
+        "webpack-ts",
+        "importmap",
         "esbuild",
         "esbuild-ts",
         "parcel",
@@ -48,11 +49,12 @@ export const templatesList = {
     "noskeletonquestion": [
         "importmap"
     ],
-    // TS by default
+    // TS by default, this is necessary to avoid asking for the language
     "tstemplates": [
         "angular",
         "svelte",
         "solid",
-        "nextjs"
+        "nextjs",
+        "bun"
     ]
 }

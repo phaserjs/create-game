@@ -3,6 +3,7 @@ import { TProjectNameAction } from "./types/questions";
 
 
 // export const githubURL = "https://github.com/phaserjs/template-{template-name}/archive/refs/heads/main.zip";
+// Proxy to analyze the request
 export const githubURL = "https://phaser.io/r/create-game-template/template-{template-name}";
 
 /**
