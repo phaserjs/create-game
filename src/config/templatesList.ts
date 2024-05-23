@@ -1,13 +1,13 @@
 export const templatesList = {
     "frontend": [
-        "angular",
         "react",
         "react-ts",
-        "solid",
-        "svelte",
+        "nextjs",
         "vue",
         "vue-ts",
-        "nextjs"
+        "angular",
+        "svelte",
+        "solid",
     ],
     "bundle": [
         "vite",
@@ -15,6 +15,7 @@ export const templatesList = {
         "bun",
         "webpack",
         "webpack-ts",
+        "remix",
         "importmap",
         "esbuild",
         "esbuild-ts",
@@ -55,6 +56,7 @@ export const templatesList = {
         "svelte",
         "solid",
         "nextjs",
-        "bun"
+        "bun",
+        "remix"
     ]
 }

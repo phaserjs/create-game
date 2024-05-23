@@ -1,4 +1,21 @@
 import chalk from 'chalk';
+import { version } from '../../package.json';
+
+const centerWelcomeMessage = (txt: string, totalWidth: number) => {
+    const fieldWidth = totalWidth - 2;
+    
+    if (fieldWidth < txt.length) {
+        throw new Error("The total width is too small for the txt string.");
+    }
+    
+    const spacesNeeded = fieldWidth - txt.length;
+    const leftPadding = Math.floor(spacesNeeded / 2);
+    const rightPadding = spacesNeeded - leftPadding;
+
+    const centeredTxt = ' '.repeat(leftPadding) + txt + ' '.repeat(rightPadding);
+    
+    return `${centeredTxt}`;
+}
 
 export const questionsText = {
     cancelByUser: 'Canceled.',
@@ -17,8 +34,8 @@ export const questionsText = {
     typeTemplate: {
         message: chalk.yellow('Select Option:'),
         choices: {
-            frontend: 'Client Framework (React, Vue, Angular, Next.js, Svelte or SolidJS)',
-            bundle: 'Web Bundler (Vite, Webpack, ESBuild, Parcel, Rollup or ImportMap)',
+            frontend: 'Client Framework (React, Next.js, Vue, Angular, Svelte or SolidJS)',
+            bundle: 'Web Bundler (Vite, Bun, Webpack, Remix, ESBuild, Parcel, Rollup or ImportMap)',
             demo: 'Demo Game (Matching Pairs, Clicker, Shmup)'
         }
     },
@@ -45,15 +62,16 @@ export const questionsText = {
             succeed: chalk.yellow('Project Downloaded')
         }
     },
-    welcomeMessage: `\no--------------------------------------------------o
-|     Welcome to the Phaser Template Installer     |
-|           Let´s start the installation           |
-o--------------------------------------------------o\n`,
-    endMessage: `\no---------------------------------------------------------o
-|               Project created successfully              |
-|                Thank you for using Phaser               |
-|       Tell us about your game! - games@phaser.io        |
-o---------------------------------------------------------o
+    welcomeMessage: `\no----------------------------------------------------o
+|${centerWelcomeMessage("Welcome to the Phaser Template Installer", 54)}|
+|${centerWelcomeMessage("Let´s start the installation", 54)}|
+|${centerWelcomeMessage(`V${version}`, 54)}|
+o----------------------------------------------------o\n`,
+    endMessage: `\no----------------------------------------------------------o
+|${centerWelcomeMessage("Project created successfully", 60)}|
+|${centerWelcomeMessage("Thank you for using Phaser", 60)}|
+|${centerWelcomeMessage("Tell us about your game! - games@phaser.io", 60)}|
+o----------------------------------------------------------o
 
 ${chalk.yellow('Next steps:')}
 1. cd {folderName}

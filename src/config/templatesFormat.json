@@ -154,6 +154,24 @@
                     "output": "src/game/main.ts"
                 }
             ]
+        },
+        "remix": {
+            "extensions": [
+                {
+                    "lang": "ts",
+                    "ext": "tsx"
+                }
+            ],
+            "replace": [
+                {
+                    "localscaffolding": "app.client.{ext}",
+                    "output": "app/app.client.{ext}"
+                },
+                {
+                    "localscaffolding": "game/main.ts",
+                    "output": "app/game/main.ts"
+                }
+            ]
         }
     }
 }
