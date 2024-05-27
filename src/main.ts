@@ -57,9 +57,6 @@ import { getDemo } from './questions/getDemo';
         }
     }
 
-    
-
-
     console.log(questionsText.endMessage.replace('{folderName}', projectConfig.folderName));
 
 })()

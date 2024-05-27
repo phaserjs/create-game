@@ -27,6 +27,7 @@ export const questionsText = {
         action: chalk.red('The folder already exists, what do you want to do?'),
         choices: {
             create: 'Choose another name',
+            use: 'Use the current folder',
             delete: 'Delete the folder'
         },
         invalidName: 'Invalid folder name. Please choose another name.'

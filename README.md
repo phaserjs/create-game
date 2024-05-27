@@ -69,6 +69,12 @@ If your folder name has spaces in it, don't forget to wrap it in quotes:
 npm create @phaserjs/game@latest "folder name"
 ```
 
+If you want to install into the current folder, use a period instead of a folder name:
+
+```
+npm create @phaserjs/game@latest .
+```
+
 ## After installation
 
 The tool will then ask you a series of questions to allow you to select the correct template for your needs.

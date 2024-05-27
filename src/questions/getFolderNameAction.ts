@@ -1,5 +1,5 @@
 import prompts from "prompts";
-import { existFolder, isValidFolderName, isClosedByUser } from "../utils";
+import { existFolder, isValidFolderName, isClosedByUser, isCurrentDirectory } from "../utils";
 import { TFolderAction, TProjectNameAction } from "../types/questions";
 import { projectConfig } from "../projectConfig";
 import { questionsText } from "../config/questionsText";
@@ -16,6 +16,7 @@ const askWhatDoIfFolderExists = async (): Promise<TFolderAction> => {
         validate: value => isValidFolderName(value) ? true : questionsText.folderNameAction.invalidName,
         choices: [
             { title: questionsText.folderNameAction.choices.create, value: 'create' },
+            { title: questionsText.folderNameAction.choices.use, value: 'use' },
             { title: questionsText.folderNameAction.choices.delete, value: 'delete' },
         ],
     });
@@ -73,30 +74,59 @@ export const getFolderNameAction = async (name?: string): Promise<TProjectNameAc
             }
 
         } 
-    } else {
+    }
+
+    else if (isCurrentDirectory(name)) {
+
+        return {
+            folderAction: 'use',
+            folderName: name.trim()
+        }
+        
+    }
+
+    else {
 
         const checkFolder = await existFolder(name);
 
         if (checkFolder) {
+
             const response = await askWhatDoIfFolderExists();
+
             if (response === 'delete') {
+
                 return {
                     folderAction: 'delete',
                     folderName: name.trim()
                 }
                 
-            } else {
+            } 
+  
+            if (response === 'use') {
+
+                return {
+                    folderAction: 'use',
+                    folderName: name.trim()
+                }
+
+            }
+
+            else {
+
                 return {
                     folderAction: 'create',
                     folderName: (await getFolderNameAction()).folderName
                 }
+
             }
 
         } else {
+
             // TODO: Improve this message
             if (!isValidFolderName(name)) {
                 throw new Error('Invalid folder name.');
             }
+
         }
 
         return {

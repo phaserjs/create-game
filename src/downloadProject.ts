@@ -26,6 +26,7 @@ export const downLoadProject = async () => {
     const zip = new AdmZip(buffer);
 
     if (projectConfig.folderAction === 'delete') {
+
         spinner.text = questionsText.downloadTemplate.spinner.deleting;
         try {
             const deletePath = path.join(`./${projectConfig.folderName}/`);
@@ -36,6 +37,7 @@ export const downLoadProject = async () => {
             spinner.fail(questionsText.downloadTemplate.spinner.deletingFail);
             return false;
         }
+
     }
 
     zip.getEntries().forEach(entry => {
