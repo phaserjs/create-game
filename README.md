@@ -36,10 +36,6 @@ npm create @phaserjs/game@latest
 ```
 
 ```
-npx @phaserjs/create-game@latest
-```
-
-```
 yarn create @phaserjs/game
 ```
 
