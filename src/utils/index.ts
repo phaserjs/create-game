@@ -6,3 +6,4 @@ export * from './getBaseURL';
 export * from './isValidFolderName';
 export * from './isClosedByUser';
 export * from './isCurrentDirectory';
+export * from './getVersion';

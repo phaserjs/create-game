@@ -22,6 +22,28 @@ export const questionsText = {
     demo: {
         message: chalk.yellow('Select Demo Game:')
     },
+    helpMessage: `
+${chalk.bold('Usage:')} ${chalk.cyan('x create @phaserjs/game@latest [folder-name]')}
+
+${chalk.bold('Options:')}
+    ${chalk.yellow('--help')}            Show this message and exit
+    ${chalk.yellow('--version')}         Print version info and exit
+
+${chalk.bold('Commands:')}
+    ${chalk.green('create')}            Create a new PhaserJS game project
+
+${chalk.bold('Examples:')}
+    # Pass a custom folder
+    $ ${chalk.blue('x create @phaserjs/game@latest folder-name')}
+
+    # If your folder name has spaces in it, don't forget to wrap it in quotes:
+    $ ${chalk.blue('x create @phaserjs/game@latest "folder name"')}
+
+    # If you want to install into the current folder, use a period instead of a folder name:
+    $ ${chalk.blue('x create @phaserjs/game@latest .')}
+
+For more information about templates please read the ${chalk.underline('README.md')} file inside of each template.
+`,
     folderNameAction: {
         message: chalk.yellow('Enter Project Name:'),
         action: chalk.red('The folder already exists, what do you want to do?'),
@@ -66,7 +88,7 @@ export const questionsText = {
     welcomeMessage: `\no----------------------------------------------------o
 |${centerWelcomeMessage("Welcome to the Phaser Template Installer", 54)}|
 |${centerWelcomeMessage("Let´s start the installation", 54)}|
-|${centerWelcomeMessage(`V${version}`, 54)}|
+|${centerWelcomeMessage(`v${version}`, 54)}|
 o----------------------------------------------------o\n`,
     endMessage: `\no----------------------------------------------------------o
 |${centerWelcomeMessage("Project created successfully", 60)}|

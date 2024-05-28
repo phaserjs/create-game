@@ -8,13 +8,27 @@ import { getTemplateLangSufix } from './questions/getTemplateLangSufix';
 import { installDemoTemplate } from './installDemoTemplate';
 import { downLoadProject } from './downloadProject';
 import { questionsText } from './config/questionsText';
-import { formatCleanTemplate } from './utils';
+import { formatCleanTemplate, getVersion } from './utils';
 import { getDemo } from './questions/getDemo';
 
 (async () => {
-    console.log(questionsText.welcomeMessage);
 
     const argv = Minimist(process.argv.slice(2));
+
+    //  -v, --version Show version
+    if (argv.v || argv.version || argv.version || argv.v) {
+        console.log(getVersion());
+        process.exit(0);
+    }
+
+    //  -h, --help Show help
+    if (argv.h || argv.help || argv.help || argv.h) {
+        console.log(questionsText.helpMessage);
+        process.exit(0);
+    }
+
+
+    console.log(questionsText.welcomeMessage);
 
     // const { template } = argv;
 
@@ -22,6 +36,8 @@ import { getDemo } from './questions/getDemo';
     // console.log("Exist template: ", existTemplate(template));
 
     const folderNameAction = await getFolderNameAction(argv._[0]);
+
+
     setProjectFolderNameAction(folderNameAction)
 
     // 1. Ask for the type of template

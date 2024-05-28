@@ -9,6 +9,7 @@ import { questionsText } from "../config/questionsText";
  * @returns A promise that resolves to a TFolderAction representing the user's choice.
  */
 const askWhatDoIfFolderExists = async (): Promise<TFolderAction> => {
+    
     const response = await prompts({
         type: 'select',
         name: 'action',
