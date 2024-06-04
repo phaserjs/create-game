@@ -14,6 +14,8 @@ Currently, we support all of the following frameworks and bundlers:
 | Next.js | Webpack |
 | SolidJS | ESBuild |
 | Svelte | Import Map |
+| ... | Bun |
+| ... | Remix |
 
 Most of these come in both JavaScript and TypeScript versions. The tool will present this option to you when available.
 
