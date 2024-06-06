@@ -10,6 +10,7 @@ import { downLoadProject } from './downloadProject';
 import { questionsText } from './config/questionsText';
 import { formatCleanTemplate, getVersion } from './utils';
 import { getDemo } from './questions/getDemo';
+import { downLoadProjectsModeDev } from './downloadProjectsModeDev';
 
 (async () => {
 
@@ -66,7 +67,7 @@ import { getDemo } from './questions/getDemo';
         // Ask for record data templates
         await getUserDesition();
 
-        await downLoadProject();
+        await downLoadProjectsModeDev();
 
         if (projectConfig.skeleton === 'clean') {
             await formatCleanTemplate();

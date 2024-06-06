@@ -11,6 +11,7 @@ export const downLoadProjectsModeDev = async () => {
     // Ora loading
     const spinner = ora(questionsText.downloadTemplate.spinner.downloading).start();
     
+    // This url is a local url, it is used to download the templates from the local folder
     const zipUrl = './templates-test/template-' + projectConfig.templateName + ((projectConfig.sufix === 'ts') ? '-ts' : '') + '.zip';
     console.log("zipUrl: ", zipUrl)
 
