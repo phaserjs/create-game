@@ -1,6 +1,6 @@
 import { TFolderAction } from './questions';
 
-export type TTemplateType = 'frontend' | 'bundle' | 'demo' | undefined;
+export type TTemplateType = 'frontend' | 'bundle' | 'phaser-editor' | 'demo' | undefined;
 export type TSuffixLang = 'js' | 'ts' | '';
 export type TTemplateSkeleton = 'clean' | 'skeleton';
 

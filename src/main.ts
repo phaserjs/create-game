@@ -52,6 +52,12 @@ import { downLoadProjectsModeDev } from './downloadProjectsModeDev';
 
         installDemoTemplate();
     }
+
+    if (templateType === 'phaser-editor') {
+        const template = await getTemplate(templateType);
+        setProjectTemplateName(template);
+    }
+
     if (templateType === 'frontend' || templateType === 'bundle') {
 
         const template = await getTemplate(templateType);

@@ -14,6 +14,7 @@ export const getTypeTemplate = async (): Promise<TTemplateType> => {
             name: 'type',
             message: questionsText.typeTemplate.message,
             choices: [
+                { title: questionsText.typeTemplate.choices.phaserEditor, value: 'phaser-editor'},
                 { title: questionsText.typeTemplate.choices.demo, value: 'demo' },
                 { title: questionsText.typeTemplate.choices.frontend, value: 'frontend' },
                 { title: questionsText.typeTemplate.choices.bundle, value: 'bundle' },

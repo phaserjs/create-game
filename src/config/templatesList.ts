@@ -1,4 +1,27 @@
 export const templatesList = {
+    "phaser-editor": [
+        "react",
+        "react-ts",
+        "nextjs",
+        "vue",
+        "vue-ts",
+        "angular",
+        "svelte",
+        "solid",
+        "vite",
+        "vite-ts",
+        "bun",
+        "webpack",
+        "webpack-ts",
+        "remix",
+        "importmap",
+        "esbuild",
+        "esbuild-ts",
+        "parcel",
+        "parcel-ts",
+        "rollup",
+        "rollup-ts"
+    ],
     "frontend": [
         "react",
         "react-ts",

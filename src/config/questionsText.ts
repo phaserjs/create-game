@@ -54,6 +54,7 @@ For more information about templates please read the ${chalk.underline('README.m
     typeTemplate: {
         message: chalk.yellow('Select Option:'),
         choices: {
+            phaserEditor: 'Phaser Editor (Phaser Editor 2D\'s templates)',
             frontend: 'Client Framework (React, Next.js, Vue, Angular, Svelte or SolidJS)',
             bundle: 'Web Bundler (Vite, Bun, Webpack, Remix, ESBuild, Parcel, Rollup or ImportMap)',
             demo: 'Demo Game (Matching Pairs, Clicker, Shmup)'
