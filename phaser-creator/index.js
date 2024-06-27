@@ -133,23 +133,31 @@ export default StartGame;
 `),this)}stop(){return this.#l?(clearInterval(this.#d),this.#d=void 0,this.#i=0,this.clear(),this.#t.hideCursor&&Ju.show(this.#r),this.#t.discardStdin&&Un.default.stdin.isTTY&&this.#n&&(ia.stop(),this.#n=!1),this):this}succeed(t){return this.stopAndPersist({symbol:$n.success,text:t})}fail(t){return this.stopAndPersist({symbol:$n.error,text:t})}warn(t){return this.stopAndPersist({symbol:$n.warning,text:t})}info(t){return this.stopAndPersist({symbol:$n.info,text:t})}stopAndPersist(t={}){if(this.#c)return this;let r=t.prefixText??this.#o,i=this.#D(r," "),o=t.symbol??" ",u=t.text??this.text,l=typeof u=="string"?" "+u:"",m=t.suffixText??this.#u,p=this.#y(m," "),D=i+o+l+p+`
 `;return this.stop(),this.#r.write(D),this}};function gr(e){return new sa(e)}var hs="1.2.0";var Xr=(e,t)=>{let r=t-2;if(r<e.length)throw new Error("The total width is too small for the txt string.");let i=r-e.length,o=Math.floor(i/2),u=i-o;return`${" ".repeat(o)+e+" ".repeat(u)}`},j={cancelByUser:"Canceled.",demo:{message:G.yellow("Select Demo Game:")},helpMessage:`
 ${G.bold("Usage:")} ${G.cyan("npm create @phaserjs/game@latest [folder-name]")}
+${G.bold("       ")} ${G.cyan("yarn create @phaserjs/game [folder-name]")}
 
 ${G.bold("Options:")}
     ${G.yellow("--help")}            Show this message and exit
     ${G.yellow("--version")}         Print version info and exit
 
 ${G.bold("Examples:")}
-    # Pass a custom folder
+    # Pass a custom folder (using npm)
     > ${G.yellow("npm create @phaserjs/game@latest folder-name")}
+
+    # Pass a custom folder (using Yarn)
+    > ${G.yellow("yarn create @phaserjs/game folder-name")}
 
     # If your folder name has spaces in it, don't forget to wrap it in quotes:
     > ${G.yellow('npm create @phaserjs/game@latest "folder name"')}
+    > ${G.yellow('yarn create @phaserjs/game "folder name"')}
 
     # If you want to install into the current folder, use a period instead of a folder name:
     > ${G.yellow("npm create @phaserjs/game@latest .")}
+    > ${G.yellow("yarn create @phaserjs/game .")}
 
 For more information about templates please read the ${G.underline("README.md")} file inside of each template.
-`,folderNameAction:{message:G.yellow("Enter Project Name:"),action:G.red("The folder already exists, what do you want to do?"),choices:{create:"Choose another name",use:"Use the current folder",delete:"Delete the folder"},invalidName:"Invalid folder name. Please choose another name."},typeTemplate:{message:G.yellow("Select Option:"),choices:{frontend:"Client Framework (React, Next.js, Vue, Angular, Svelte or SolidJS)",bundle:"Web Bundler (Vite, Bun, Webpack, Remix, ESBuild, Parcel, Rollup or ImportMap)",demo:"Demo Game (Matching Pairs, Clicker, Shmup)"}},template:{message:G.yellow("Select Template:")},cleanOrSkeleton:{message:G.yellow("Minimal or Complete Project:"),choices:{clean:"Minimal (Single Phaser Scene)",skeleton:"Complete (Common Phaser Scene selection)"}},templateLangSufix:{message:G.yellow("Select Development Language:")},downloadTemplate:{spinner:{downloading:"Downloading Template",downloadingFail:"Error downloading {templateName} template",deleting:"Deleting Project folder",deletingSuccess:G.blue("Project folder deleted"),deletingFail:G.red("Error deleting project folder"),succeed:G.yellow("Project Downloaded")}},welcomeMessage:`
+`
+
+,folderNameAction:{message:G.yellow("Enter Project Name:"),action:G.red("The folder already exists, what do you want to do?"),choices:{create:"Choose another name",use:"Use the current folder",delete:"Delete the folder"},invalidName:"Invalid folder name. Please choose another name."},typeTemplate:{message:G.yellow("Select Option:"),choices:{frontend:"Client Framework (React, Next.js, Vue, Angular, Svelte or SolidJS)",bundle:"Web Bundler (Vite, Bun, Webpack, Remix, ESBuild, Parcel, Rollup or ImportMap)",demo:"Demo Game (Matching Pairs, Clicker, Shmup)"}},template:{message:G.yellow("Select Template:")},cleanOrSkeleton:{message:G.yellow("Minimal or Complete Project:"),choices:{clean:"Minimal (Single Phaser Scene)",skeleton:"Complete (Common Phaser Scene selection)"}},templateLangSufix:{message:G.yellow("Select Development Language:")},downloadTemplate:{spinner:{downloading:"Downloading Template",downloadingFail:"Error downloading {templateName} template",deleting:"Deleting Project folder",deletingSuccess:G.blue("Project folder deleted"),deletingFail:G.red("Error deleting project folder"),succeed:G.yellow("Project Downloaded")}},welcomeMessage:`
 o----------------------------------------------------o
 |${Xr("Welcome to the Phaser Template Installer",54)}|
 |${Xr("Let\xB4s start the installation",54)}|
