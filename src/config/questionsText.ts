@@ -24,7 +24,7 @@ export const questionsText = {
         message: chalk.yellow('Select Demo Game:')
     },
     helpMessage: `
-${chalk.bold('Usage:')} ${chalk.cyan('npm create @phaserjs/game@latest [folder-name]')}
+${chalk.bold('Usage:')} ${chalk.cyan(`${getPackageManagerName()} create @phaserjs/game@latest [folder-name]`)}
 
 ${chalk.bold('Options:')}
     ${chalk.yellow('--help')}            Show this message and exit
@@ -32,13 +32,13 @@ ${chalk.bold('Options:')}
 
 ${chalk.bold('Examples:')}
     # Pass a custom folder
-    > ${chalk.yellow('npm create @phaserjs/game@latest folder-name')}
+    > ${chalk.yellow(`${getPackageManagerName()} create @phaserjs/game@latest folder-name`)}
 
     # If your folder name has spaces in it, don't forget to wrap it in quotes:
-    > ${chalk.yellow('npm create @phaserjs/game@latest "folder name"')}
+    > ${chalk.yellow(`${getPackageManagerName()} create @phaserjs/game@latest "folder name"`)}
 
     # If you want to install into the current folder, use a period instead of a folder name:
-    > ${chalk.yellow('npm create @phaserjs/game@latest .')}
+    > ${chalk.yellow(`${getPackageManagerName()} create @phaserjs/game@latest .`)}
 
 For more information about templates please read the ${chalk.underline('README.md')} file inside of each template.
 `,

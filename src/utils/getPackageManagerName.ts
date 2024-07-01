@@ -1,7 +1,7 @@
 export const getPackageManagerName = () => {
     
     const isYarn = !!process.env.npm_execpath && process.env.npm_execpath.includes('yarn');
-    const isBun = !!process.env.BUN_ENV;
+    const isBun = !!process.env.npm_execpath && process.env.npm_execpath.includes('bun');
     const isPnpm = !!process.env.npm_execpath && process.env.npm_execpath.includes('pnpm');
 
     let runner = 'npm';
@@ -18,3 +18,4 @@ export const getPackageManagerName = () => {
     return runner;
 
 }
+
