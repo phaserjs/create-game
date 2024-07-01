@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import { version } from '../../package.json';
+import { getPackageManagerName } from '../utils/getPackageManagerName';
 
 const centerWelcomeMessage = (txt: string, totalWidth: number) => {
     const fieldWidth = totalWidth - 2;
@@ -95,8 +96,8 @@ o----------------------------------------------------------o
 
 ${chalk.yellow('Next steps:')}
 1. cd {folderName}
-2. npm install
-3. npm run dev
+2. ${getPackageManagerName()} install
+3. ${getPackageManagerName()} run dev
 
 ${chalk.cyan('Happy coding!')}`,
     recordData: `We anonymously record which template was selected to help guide development.\nIf you don't agree, press N to Quit. Otherwise, press Y.`
