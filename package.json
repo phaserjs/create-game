@@ -1,6 +1,6 @@
 {
     "name": "@phaserjs/create-game",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "Create a new Phaser game project from a template",
     "main": "main.js",
     "bin": {
