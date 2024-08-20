@@ -8,6 +8,7 @@ export const templatesList = {
         "angular",
         "svelte",
         "solid",
+        "rapier",
     ],
     "bundle": [
         "vite",
@@ -48,7 +49,8 @@ export const templatesList = {
     ],
     // Dont ask for clean/skeleton. There are templates that are only skeleton mode.
     "noskeletonquestion": [
-        "importmap"
+        "importmap",
+        "rapier"
     ],
     // TS by default, this is necessary to avoid asking for the language
     "tstemplates": [
