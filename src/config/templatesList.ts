@@ -7,8 +7,7 @@ export const templatesList = {
         "vue-ts",
         "angular",
         "svelte",
-        "solid",
-        "rapier",
+        "solid"
     ],
     "bundle": [
         "vite",
@@ -24,6 +23,32 @@ export const templatesList = {
         "parcel-ts",
         "rollup",
         "rollup-ts"
+    ],
+    "middleware": [
+        {
+            templateName: "phaser-rune-multiplayer-tic-tac-toe",
+            name: "Rune Multiplayer Tic Tac Toe",
+            description: "Phaser+Rune Multiplayer Tic-Tac-Toe",
+            url: "https://phaser.io/r/create-game-rune"
+        },
+        {
+            templateName: "discord-template",
+            name: "Phaser Discord Game Templates",
+            description: "Discord Activities",
+            url: "https://phaser.io/r/create-game-template/discord-template"
+        },
+        {
+            templateName: "discord-multiplayer-template",
+            name: "Phaser Discord Multiplayer Game Templates",
+            description: "Discord Activities Multiplayer",
+            url: "https://phaser.io/r/create-game-template/discord-multiplayer-template"
+        },
+        {
+            templateName: "template-rapier",
+            name: "Rapier",
+            description: "Easily use the Rapier physics library with Phaser 3",
+            url: "https://phaser.io/r/create-game-template/template-rapier"
+        }
     ],
     "demo": [
         /* if we want to add more demos */

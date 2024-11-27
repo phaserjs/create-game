@@ -20,6 +20,9 @@ const centerWelcomeMessage = (txt: string, totalWidth: number) => {
 
 export const questionsText = {
     cancelByUser: 'Canceled.',
+    third: {
+        message: chalk.yellow('Select Third Party Template:')
+    },
     demo: {
         message: chalk.yellow('Select Demo Game:')
     },
@@ -55,9 +58,10 @@ For more information about templates please read the ${chalk.underline('README.m
     typeTemplate: {
         message: chalk.yellow('Select Option:'),
         choices: {
-            frontend: 'Client Framework (React, Next.js, Vue, Angular, Svelte or SolidJS)',
+            frontend: 'Client Framework (React, Next.js, Vue, Angular, Svelte, SolidJS or Rapier)',
             bundle: 'Web Bundler (Vite, Bun, Webpack, Remix, ESBuild, Parcel, Rollup or ImportMap)',
-            demo: 'Demo Game (Matching Pairs, Clicker, Shmup)'
+            demo: 'Demo Game (Matching Pairs, Clicker, Shmup)',
+            middleware: 'Middleware (Discord Activities, Rune, Rapier Physics)'
         }
     },
     template: {

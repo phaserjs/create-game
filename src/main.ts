@@ -10,6 +10,9 @@ import { downLoadProject } from './downloadProject';
 import { questionsText } from './config/questionsText';
 import { formatCleanTemplate, getVersion } from './utils';
 import { getDemo } from './questions/getDemo';
+import { getMiddleware } from './questions/getMiddleware';
+import { downLoadProjectURL } from './downloadProjectURL';
+import { templatesList } from './config/templatesList';
 
 (async () => {
 
@@ -51,6 +54,20 @@ import { getDemo } from './questions/getDemo';
 
         installDemoTemplate();
     }
+
+    if (templateType === 'middleware') {
+        const middleware = await getMiddleware();
+        setProjectTemplateName(middleware);
+
+        const template = templatesList.middleware.find(m => m.templateName === middleware);
+
+        await getUserDesition();
+
+        if (template?.url) {
+            await downLoadProjectURL(template?.url);
+        }
+    }
+
     if (templateType === 'frontend' || templateType === 'bundle') {
 
         const template = await getTemplate(templateType);
