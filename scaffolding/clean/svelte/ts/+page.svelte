@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import type { Scene } from 'phaser';
-    import PhaserGame, { type TPhaserRef } from '../game/PhaserGame.svelte';
+    import PhaserGame, { type TPhaserRef } from '../PhaserGame.svelte';
 
     //  References to the PhaserGame component (game and scene are exposed)
     let phaserRef: TPhaserRef = { game: null, scene: null};
