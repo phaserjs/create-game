@@ -17,15 +17,20 @@ export const formatCleanTemplate = () => {
 
             // DELETE FILES FROM GENERIC TEMPLATES (if some template don't need it, this is ignored automatically)
             clean.delete.forEach((item) => {
-                const itemFormatted = item.replace('{ext}', projectConfig.lang).replace('game/', (projectConfig.templateType === 'frontend') ? 'game/' : '');
+                // const itemFormatted = item.replace('{ext}', projectConfig.lang).replace('game/', (projectConfig.templateType === 'frontend') ? 'game/' : '');
+
+                const itemFormatted = item.replace('{ext}', projectConfig.lang)
                 const path = `./${projectConfig.folderName}/${itemFormatted}`;
+
                 fse.removeSync(path);
             });
 
             // ADD FILES FROM GENERIC TEMPLATES
             clean.add.forEach((item) => {
                 const localScaffolding = item.localscaffolding.replace('{ext}', projectConfig.lang);
-                const outputFileFormat = item.output.replace('{ext}', projectConfig.lang).replace('game/', (projectConfig.templateType === 'frontend') ? 'game/' : '');
+                // const outputFileFormat = item.output.replace('{ext}', projectConfig.lang).replace('game/', (projectConfig.templateType === 'frontend') ? 'game/' : '');
+
+                const outputFileFormat = item.output.replace('{ext}', projectConfig.lang);
 
                 const pathScalfolding = `${getBaseURL()}/scaffolding/clean/generic/${localScaffolding}`;
                 const outputPath = `./${projectConfig.folderName}/${outputFileFormat}`;

@@ -45,7 +45,7 @@
                     },
                     {
                         "search": "{template-export}",
-                        "replace": "export default new Game(config);",
+                        "replace": "const StartGame = (parent) => {\n    return new Game({ ...config, parent });\n}\n\nexport default StartGame;\n",
                         "frontendreplace": "const StartGame = (parent) => {\n    return new Game({ ...config, parent });\n}\n\nexport default StartGame;\n"
                     }
                 ]
