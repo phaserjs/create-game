@@ -1,3 +1,5 @@
+import * as Phaser from 'phaser';
+
 /**
  * Create a card game object
  */

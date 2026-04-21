@@ -1,5 +1,5 @@
 import { createCard } from './createCard';
-import Phaser from 'phaser';
+import * as Phaser from 'phaser';
 
 /**
  * Card Memory Game by Francisco Pereira (Gammafp)

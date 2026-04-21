@@ -1,6 +1,6 @@
 import { Preloader } from './Preloader';
 import { Play } from './Play';
-import Phaser from 'phaser';
+import * as Phaser from 'phaser';
 
 const config = {
     title: 'Card Memory Game',
