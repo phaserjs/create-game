@@ -4,7 +4,7 @@ export class Bullet extends GameObjects.Image
 {
     speed;
     flame;
-    end_direction = new Math.Vector2(0, 0);
+    end_direction = new PhaserMath.Vector2(0, 0);
 
     constructor(scene, x, y) {
         super(scene, x, y, "bullet");
