@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { IRefPhaserGame, PhaserGame } from './PhaserGame';
+import * as Phaser from 'phaser';
 
 function App()
 {

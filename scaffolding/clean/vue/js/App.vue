@@ -1,5 +1,5 @@
 <script setup>
-import Phaser from 'phaser';
+import * as Phaser from 'phaser';
 import { ref, toRaw } from 'vue';
 import PhaserGame from './PhaserGame.vue';
 

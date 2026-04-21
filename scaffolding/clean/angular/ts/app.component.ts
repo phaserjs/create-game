@@ -2,7 +2,7 @@ import { Component, viewChild } from '@angular/core';
 import { PhaserGame } from './phaser-game.component';
 import { CommonModule } from '@angular/common';
 import { EventBus } from '../game/EventBus';
-import Phaser from 'phaser';
+import * as Phaser from 'phaser';
 
 @Component({
     selector: 'app-root',

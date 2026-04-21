@@ -1,4 +1,4 @@
-import { GameObjects, Math } from "phaser";
+import { GameObjects, Math as PhaserMath } from "phaser";
 
 export class Bullet extends GameObjects.Image
 {
@@ -8,7 +8,7 @@ export class Bullet extends GameObjects.Image
 
     constructor(scene, x, y) {
         super(scene, x, y, "bullet");
-        this.speed = Phaser.Math.GetSpeed(450, 1);
+        this.speed = PhaserMath.GetSpeed(450, 1);
         this.postFX.addBloom(0xffffff, 1, 1, 2, 1.2);
         // Default bullet (player bullet)
         this.name = "bullet";
